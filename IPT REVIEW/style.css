@@ -294,3 +294,71 @@ section{
     font-size: 24px; /* Change the font size to your desired value */
     color: #555; /* Custom text color */
 }
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff; /* Set the background color */
+    z-index: 1000; /* Ensure the header stays on top of other content */
+}
+
+.header-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 9%;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    margin-right: 0.5rem;
+}
+
+.search-form {
+    width: 50rem;
+    height: 5rem;
+    border: var(--border);
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+
+.search-form input {
+    font-size: 1.5rem;
+    padding: 0 1.2rem;
+    height: 100%;
+    width: 100%;
+    text-transform: none;
+    color: var(--black);
+}
+
+.search-form label {
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.icons div,
+.icons a {
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.icons div:hover,
+.icons a:hover {
+    color: var(--green);
+}
