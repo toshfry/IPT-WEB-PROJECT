@@ -189,208 +189,153 @@ section{
     z-index: 1000;
 }
 
-.reviews-slider {
-    width: 80%;
-    margin: 40px auto;
+body{
+    height:300rem;
 }
 
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
-    padding: 20px;
+.books-slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden; /* Hide the overflow */
 }
 
-.swiper-slide.review {
-    width: 80%;
+.swiper-slide img {
+    width: 50%; /* Set images to fill the slider container */
+    height: auto;
     margin: 0 auto;
 }
 
-.swiper-slide.reviewer {
-    margin-bottom: 20px;
+.books-slider {
+    position: relative; /* Ensure positioning context for absolute positioning of arrows */
+    width: 100%;
+    max-width: 800px; /* Adjust according to your design */
+    margin: 0 auto; /* Center the slider */
 }
 
-.swiper-slide.reviewer img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: 0 auto;
-}
-
-.swiper-slide.review-text {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.swiper-pagination {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    background: #ccc;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-.swiper-pagination-bullet-active {
-    background: var(--green);
-}
-
-.swiper-button-prev,
-.swiper-button-next {
+.swiper-button-next,
+.swiper-button-prev {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-    cursor: pointer;
+    top: 50%; /* Align vertically at the middle */
+    transform: translateY(-50%); /* Adjust for exact centering */
+    z-index: 10; /* Ensure the arrows appear on top of the slides */
+}
+
+.swiper-button-next {
+    right: 10px; /* Adjust the distance from the right edge */
 }
 
 .swiper-button-prev {
-    left: 20px;
+    left: 10px; /* Adjust the distance from the left edge */
+}
+
+/*arrival slider*/
+
+.arrivals-slider {
+    position: relative; /* Ensure positioning context for absolute positioning of arrows */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
 }
 
 .swiper-button-next {
-    right: 20px;
+    right: 10px;
 }
 
-/* Define styles for filled star */
-.star-rating .fa-star.checked {
-    color: #ffd700; /* Yellow color */
+.swiper-button-prev {
+    left: 10px;
 }
 
-/* Define styles for empty star */
-.star-rating .fa-star {
-    color: #ccc; /* Light gray color */
+.arrivals-slider .image img {
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
 }
 
-/* Style for the Reviews section */
-#reviews {
-    text-align: left;
-    padding: 50px 1;
-    background-color: #f9f9f9; /* Light gray background */
-    border-bottom: 1px solid #ddd; /* Gray border at the bottom */
-}
+/* blogs */
 
-/* Style for the section title */
-.section-title {
-    font-family: 'Your Custom Font', Arial, sans-serif; /* Custom font */
-    font-size: 32px; /* Larger font size */
-    color: #333; /* Dark gray text color */
-    margin-bottom: 30px; /* Increased bottom margin */
-}
-
-/* Customizable font and font size */
-.custom-font {
-    font-family: 'Your Custom Font', Arial, sans-serif; /* Change 'Your Custom Font' to your desired font */
-    font-size: 24px; /* Change the font size to your desired value */
-    color: #555; /* Custom text color */
-}
-
-.header .header-1{
-    background:white;
-    padding: 1.5rem 9%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-.header .header-1 .logo{
-    font-size: 2.5rem;
-    font-weight: bolder;
-    color: var(--black);
-
-    
-
-}
-
-.header .header-1 .logo i{
-    color: var(--green);
-}
-
-
-.header .header-1 .search-form{
-    width: 50rem;
-    height: 5rem;
-    border: var(--border);
-    overflow: hidden;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    border-radius: .5rem;
-
-}
-.header .header-1 .search-form input{
-    font-size: 1.5rem;
-    padding:0 1.2rem;
-    height: 100%;
+.blogs-slider {
+    position: relative;
     width: 100%;
-    text-transform: none;
-    color: var(--black);
+    overflow: hidden;
 }
 
-.header .header-1 .search-form label{
-    font-size: 2.5rem;
-    padding-right: 1.5rem;
-    color: var(--black);
+.blogs-slider .swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.blogs-slider .swiper-slide {
+    flex-shrink: 0;
+}
+
+.blogs-slider .image img {
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(253, 247, 247, 0); /* Adjust the arrow background color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
-.header .header-1 .search-form label:hover{
-    color: var(--green);
+.swiper-button-next {
+    right: 10px;
 }
 
-
-.header .header-1 .icons div,
-.header .header-1 .icons a{
-
-    font-size: 2.5rem;
-    margin-left: 1.5rem;
-    color: var(--black);
-    cursor: pointer;
+.swiper-button-prev {
+    left: 10px;
 }
+ 
+/*featured*/
 
-
-.header .header-1 .icons div:hover,
-.header .header-1 .icons a:hover{
-
-    color: var(--green);
-}
-
-#search-btn{
-
-    display: none;
-}
-
-
-/* footer */
-.footer-bottom {
-    background-color: #f8f9fa;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  .container {
-    max-width: 1200px;
+/* Ensure the slider container is styled properly */
+.featured-slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Adjust according to your design */
     margin: 0 auto;
-  }
-  
-  .footer-bottom p {
-    margin: 0;
-  }
-  
-  .footer-bottom img {
-    margin-top: 10px;
-  }
+    overflow: hidden; /* Hide the overflow */
+}
+
+/* Style the swiper slide images */
+.swiper-slide img {
+    width: 30%; /* Make the image fill the container width */
+    height: 30%; /* Let the height adjust proportionally */
+    max-height: 100%; /* Ensure the height doesn't exceed the container's height */
+}
 
 
+/* Style the navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+}
 
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
